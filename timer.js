@@ -2,29 +2,31 @@ function clock()
 	{
 		var today = new Date();
 		var hour1 = today.getHours();
-			if (hour1<20)
+			if (hour1<10)
+				{
+					hour1='';
+				}
+			else if (hour1<20)
 				{
 					hour1='1';
 				}
-			else if (hour1<30)
+			else
 				{
 					hour1='2';
 				}
-			else
-			{
-				hour1='';
-			}
-			
 		var hour2= today.getHours();
-		
-			if (hour2<20)
-			{	
-			hour2=hour2-10;
-			}
-			if (hour2<30)
-			{	
-			hour2=hour2-20;
-			}
+			if (hour2<10)
+				{	
+					hour2=hour2;
+				}
+			else if (hour2<20)
+				{	
+					hour2=hour2-10;
+				}
+			else
+				{	
+					hour2=hour2-20;
+				}
 		var minute1 = today.getMinutes();
 			if (minute1<10)
 				{
