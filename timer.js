@@ -3,86 +3,52 @@ function clock()
 		var today = new Date();
 		var hour1 = today.getHours();
 			if (hour1<10)
-				{
-					hour1='';
-				}
-			else if (hour1<20)
-				{
-					hour1='1';
+				{	
+					hour1= ' ' + hour1;
 				}
 			else
-				{
-					hour1='2';
+				{	
+					hour1=hour1;
 				}
+		var digit1 = hour1.toString()[0];
 		var hour2= today.getHours();
 			if (hour2<10)
 				{	
-					hour2=hour2;
-				}
-			else if (hour2<20)
-				{	
-					hour2=hour2-10;
+					hour2= '0' + hour2;
 				}
 			else
 				{	
-					hour2=hour2-20;
+					hour2=hour2;
 				}
+		var digit2 = hour2.toString()[1];
+		
 		var minute1 = today.getMinutes();
 			if (minute1<10)
 				{
-					minute1='0';
-				}
-			else if (minute1<20)
-				{
-					minute1='1';
-				}	
-			else if (minute1<30)
-				{
-					minute1='2';
-				}
-			else if (minute1<40)
-				{
-					minute1='3';
-				}
-			else if (minute1<50)
-				{
-					minute1='4';
+					minute1 = '0' + minute1;
 				}
 			else
 				{
-					minute1='5'
+				minute1 = minute1;
 				}
-	
-		var minute2 = today.getMinutes();
+		var digit3 = minute1.toString()[0];
 		
-			 if (minute2<10)
+		var minute2 = today.getMinutes();
+			if (minute2<10)
 				{
-					minute2=minute2;
-				}
-			else if (minute2<20)
-				{
-					minute2=minute2-10;
-				}
-			else if (minute2<30)
-				{
-					minute2=minute2-20;
-				}	
-			else if (minute2<40)
-				{
-					minute2=minute2-30;
-				}
-			else if (minute2<50)
-				{
-					minute2=minute2-40;
+					minute2 = '0' + minute2;
 				}
 			else
 				{
-					minute2=minute2-50;
+				minute2 = minute2;
 				}
-		document.getElementById("hour1").innerHTML = hour1;
-		document.getElementById("hour2").innerHTML = hour2;
-		document.getElementById("minute1").innerHTML = minute1;
-		document.getElementById("minute2").innerHTML = minute2;
+		var digit4 = minute2.toString()[1];
+		
+		// wyświetlanie cyrf
+		document.getElementById("hour1").innerHTML = digit1;
+		document.getElementById("hour2").innerHTML = digit2;
+		document.getElementById("minute1").innerHTML = digit3;
+		document.getElementById("minute2").innerHTML = digit4;
 		setTimeout("clock()",1000);
 		
 	}
