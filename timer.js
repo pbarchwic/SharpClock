@@ -1,48 +1,29 @@
 function clock()
 	{
 		var today = new Date();
-		var hour1 = today.getHours();
-			if (hour1<10)
+		var hour = today.getHours();
+			if (hour<10)
 				{	
-					hour1= ' ' + hour1;
+					hour= ' ' + hour;
 				}
 			else
 				{	
-					hour1=hour1;
+					hour=hour;
 				}
-		var digit1 = hour1.toString()[0];
-		var hour2= today.getHours();
-			if (hour2<10)
-				{	
-					hour2= '0' + hour2;
-				}
-			else
-				{	
-					hour2=hour2;
-				}
-		var digit2 = hour2.toString()[1];
+		var digit1 = hour.toString()[0];
+		var digit2 = hour.toString()[1];
 		
-		var minute1 = today.getMinutes();
-			if (minute1<10)
+		var minute = today.getMinutes();
+			if (minute<10)
 				{
-					minute1 = '0' + minute1;
+					minute = '0' + minute;
 				}
 			else
 				{
-				minute1 = minute1;
+				minute = minute;
 				}
-		var digit3 = minute1.toString()[0];
-		
-		var minute2 = today.getMinutes();
-			if (minute2<10)
-				{
-					minute2 = '0' + minute2;
-				}
-			else
-				{
-				minute2 = minute2;
-				}
-		var digit4 = minute2.toString()[1];
+		var digit3 = minute.toString()[0];
+		var digit4 = minute.toString()[1];
 		
 		// wyświetlanie cyrf
 		document.getElementById("hour1").innerHTML = digit1;
